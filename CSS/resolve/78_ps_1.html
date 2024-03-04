@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .navi{
+            width: 960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+        .navi ul{
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        .navi ul li{
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+        /* 
+        :link - 방문하지 않는 링크 스타일 적용
+        :visited - 방문한 링크 스타일 적용
+        :hover - 마우스 위에 있을 때 스타일 적용
+        :active - 활성화했을 때(ex 클릭했을 때)
+        :focus - 초점이 맞춰졌을 때
+
+        순서는 다음과 같이 정의한다.
+        순서가 바뀌면 스타일이 제대로 적용되지 않는다
+        LoVe HAte
+        :link, :visited, :hover, :active
+        */
+        .navi a:link, .navi a:visited{
+            display: block;
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .navi a:hover, .navi a:focus{
+            background-color: #222;
+            color:#fff;
+        }
+        .navi a:active{
+            background-color: #f00;
+        }
+        .contents{
+            margin: 30px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+        /* 해당하는 id로 링크했을 때 스타일 변경하고 싶을 때*/
+        #intro:target{
+            background-color: #0069e0;
+            color: #fff;
+        }
+        #room:target{
+            background-color: #ff9844;
+        }
+        #reservation:target{
+            background-color: #fff8dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <!-- 클릭 시 해당 id 위치로 이동함 -->
+                <li><a href="#intro">이용 안내</a></li>
+                <li><a href="#room">객실 안내</a></li>
+                <li><a href="#reservation">예약 방법 및 요금</a></li>
+                <li><a href="79_ps_2.html">예약하기</a></li>
+            </ul>
+        </nav>
+        <div id="intro" class="contents">
+            <h2>이용 안내</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi. Rhoncus urna neque viverra justo nec ultrices dui. Nibh praesent tristique magna sit amet purus. Amet tellus cras adipiscing enim eu turpis egestas. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Iaculis urna id volutpat lacus laoreet non. Iaculis nunc sed augue lacus viverra. Dolor morbi non arcu risus quis varius. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean. Netus et malesuada fames ac turpis. Tortor posuere ac ut consequat semper viverra nam. Nibh praesent tristique magna sit. Non diam phasellus vestibulum lorem sed risus. Varius duis at consectetur lorem. Eget sit amet tellus cras adipiscing enim eu. A condimentum vitae sapien pellentesque habitant morbi. Sit amet volutpat consequat mauris nunc. Nam at lectus urna duis convallis convallis. Dictumst vestibulum rhoncus est pellentesque elit. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Varius duis at consectetur lorem donec massa sapien faucibus. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Viverra suspendisse potenti nullam ac tortor vitae. Tellus in metus vulputate eu scelerisque felis. Gravida arcu ac tortor dignissim convallis aenean et tortor. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Duis at tellus at urna condimentum. Massa id neque aliquam vestibulum morbi blandit cursus risus.</p>
+        </div>
+        <div id="room" class="contents">
+            <h2>객실 소개</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi. Rhoncus urna neque viverra justo nec ultrices dui. Nibh praesent tristique magna sit amet purus. Amet tellus cras adipiscing enim eu turpis egestas. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Iaculis urna id volutpat lacus laoreet non. Iaculis nunc sed augue lacus viverra. Dolor morbi non arcu risus quis varius. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean. Netus et malesuada fames ac turpis. Tortor posuere ac ut consequat semper viverra nam. Nibh praesent tristique magna sit. Non diam phasellus vestibulum lorem sed risus. Varius duis at consectetur lorem. Eget sit amet tellus cras adipiscing enim eu. A condimentum vitae sapien pellentesque habitant morbi. Sit amet volutpat consequat mauris nunc. Nam at lectus urna duis convallis convallis. Dictumst vestibulum rhoncus est pellentesque elit. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Varius duis at consectetur lorem donec massa sapien faucibus. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Viverra suspendisse potenti nullam ac tortor vitae. Tellus in metus vulputate eu scelerisque felis. Gravida arcu ac tortor dignissim convallis aenean et tortor. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Duis at tellus at urna condimentum. Massa id neque aliquam vestibulum morbi blandit cursus risus.</p>
+        </div>
+        <div id="reservation" class="contents">
+            <h2>예약 방법 및 요금</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi. Rhoncus urna neque viverra justo nec ultrices dui. Nibh praesent tristique magna sit amet purus. Amet tellus cras adipiscing enim eu turpis egestas. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Iaculis urna id volutpat lacus laoreet non. Iaculis nunc sed augue lacus viverra. Dolor morbi non arcu risus quis varius. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean. Netus et malesuada fames ac turpis. Tortor posuere ac ut consequat semper viverra nam. Nibh praesent tristique magna sit. Non diam phasellus vestibulum lorem sed risus. Varius duis at consectetur lorem. Eget sit amet tellus cras adipiscing enim eu. A condimentum vitae sapien pellentesque habitant morbi. Sit amet volutpat consequat mauris nunc. Nam at lectus urna duis convallis convallis. Dictumst vestibulum rhoncus est pellentesque elit. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Varius duis at consectetur lorem donec massa sapien faucibus. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Viverra suspendisse potenti nullam ac tortor vitae. Tellus in metus vulputate eu scelerisque felis. Gravida arcu ac tortor dignissim convallis aenean et tortor. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Duis at tellus at urna condimentum. Massa id neque aliquam vestibulum morbi blandit cursus risus.</p>
+        </div>
+    </div>
+</body>
+</html>
