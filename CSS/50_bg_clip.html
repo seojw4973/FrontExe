@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 범위 정하기</title>
+    <style>
+        .desc{
+            border: 5px dotted #222;
+            background-color: #ffd9a0;
+            width: 350px;
+            padding: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+        #clip-border{
+            background-clip: border-box;    /* 테두리 부분 까지 배경 색상이 들어감 */
+        }
+        #clip-padding{
+            background-clip: padding-box;   /* 패딩 부분까지만 배경 색상이 들어감 */
+        }
+        #clip-content{
+            background-clip: content-box;   /* 콘텐츠 부분까지만 배경 색상이 들어감 */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 식물 및 열매. 이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <b>전혀 관계가 없는</b> 진달래과 식물</p>
+            <p>참고로 자르면 <em>포도와 유사하게 생겼는데</em> 녹색의 속살이 들어있다.<br> 물론 품종에 따라 보라색과 검은색의 속살이 들어있기도 하다.</p>
+        </div>
+        <div class="desc" id="clip-padding">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 식물 및 열매. 이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <b>전혀 관계가 없는</b> 진달래과 식물</p>
+            <p>참고로 자르면 <em>포도와 유사하게 생겼는데</em> 녹색의 속살이 들어있다.<br> 물론 품종에 따라 보라색과 검은색의 속살이 들어있기도 하다.</p>
+        </div>
+        <div class="desc" id="clip-content">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 식물 및 열매. 이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <b>전혀 관계가 없는</b> 진달래과 식물</p>
+            <p>참고로 자르면 <em>포도와 유사하게 생겼는데</em> 녹색의 속살이 들어있다.<br> 물론 품종에 따라 보라색과 검은색의 속살이 들어있기도 하다.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

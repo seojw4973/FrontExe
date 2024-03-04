@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제 3</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      /* width: 250px; */
+      /* height: 150px; */
+      caption-side: bottom;
+      border: 1px solid black;
+      /* line-height: 50px; */
+      
+    }
+    /* 기존에 내가 푼 방식은 th와 td를 나눠서 속성 적용 */
+    /* th{
+      background-color: #f1f3f5;
+      font-size: 18px;
+    }
+    td{
+      
+      text-align: center;
+    } */
+    td, th{
+      border: 1px solid black;
+      padding: 10px;
+      /* 별도의 글자 정렬을 하지 않고, padding를 줘서 표 안의 공간을 부여 */
+    }
+/* 
+    caption{
+      line-height: 30px;
+      font-size: 20px;
+    } */
+    .heading{
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <table border="1">
+    <caption>2019 국민 독서실태</caption>
+    <!-- col태그는 각 행이나 셀의 스타일을 반복하지 않고, 열마다 각각 다른 스타일을 적용하고 싶을 때 유용하게 사용할 수 있음      -->
+    <col class="heading">
+    <col>
+    <col>
+    <thead>
+      <tr class="heading">
+        <th>구분</th>
+        <th>성인</th>
+        <th>독서자</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>종이책</th>
+        <td>6.1권</td>
+        <td>11.8권</td>
+      </tr>
+      <tr>
+        <th>전자책</th>
+        <td>1.2권</td>
+        <td>7.1권</td>
+      </tr>
+      <tr>
+        <th>오디오북</th>
+        <td>0.2권</td>
+        <td>5.5권</td>
+      </tr>      
+    </tbody>
+  </table>
+</body>
+</html>

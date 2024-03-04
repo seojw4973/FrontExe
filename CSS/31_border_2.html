@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 100px;
+            border-width: 5px;
+            border-style: solid;
+        }
+        #box1{border-width: 2px;}                   /* 4방향 모두 2px */
+        #box2{border-width: thick thin;}            /* 2개만 줄 경우 top, bottom은 굵게, left, right는 얇게*/
+        #box3{border-width: thick thin thin;}       /* 3개를 줄 경우 top-thick, (right, left-thin), bottom-thin*/
+        #box4{border-width: 10px 5px 5px 10px;}     /* top, right, bottom, left */
+
+    </style>
+</head>
+<body>
+    <div id="box1">상자</div>
+    <div id="box2">상자</div>
+    <div id="box3">상자</div>
+    <div id="box4">상자</div>
+</body>
+</html>
