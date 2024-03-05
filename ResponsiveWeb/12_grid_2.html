@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr);          화면의 크기를 1fr씩 3번 분할 */
+            /* grid-template-columns: 1fr 1fr 1fr;             위와 같음 */
+            grid-template-columns: 2fr, 1fr, 3fr;           /* 2/6, 1/6, 3/6 차지*/
+            grid-template-rows: minmax(100px, auto);        /* 줄높이 최소 100px 이상 */
+        }
+        .items{
+            padding: 10px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div>
+</body>
+</html>
