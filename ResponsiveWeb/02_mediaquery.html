@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1024를 넘어서는 경우 이 스타일이 적용됨*/
+        body{       
+            background: url(../images/bg0.jpg) no-repeat;
+            background-size: cover;
+        }
+        /* 768보다 크고, 1024보다 작거나 같은 경우 이 스타일 적용*/
+        @media screen and (max-width:1024px){
+            body{       
+            background: url(../images/bg1.jpg) no-repeat;
+            background-size: cover;
+        }
+        }
+        /* 320보다 크고, 768보다 작거나 같은 경우 이 스타일 적용*/
+        @media screen and (max-width:768px){
+            body{       
+            background: url(../images/bg2.jpg) no-repeat;
+            background-size: cover;
+        }
+        }
+        /* 320보다 작거나 같은 경우 이 스타일 적용*/
+        @media screen and (max-width:320px){
+            body{       
+            background: url(../images/bg3.jpg) no-repeat;
+            background-size: cover;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
