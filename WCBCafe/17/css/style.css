@@ -103,7 +103,7 @@ img{
 
     /* 4) 배경 이미지와 그레디언트 블렌딩 */
     background-image: url(../../../siteimages/main-bg.jpg), linear-gradient(#c9ffbf, #ffafbd);
-    background-blend-mode: luminosity;
+    background-blend-mode: luminosity;      /* 백그라운드 이미지와 백그라운드 색상을 혼합했을 때 효과를 만들어 줌*/
 
     min-height: 100vh;
 }

@@ -110,3 +110,14 @@ img{
 #home .page-title{
     text-transform: none;
 }
+
+/* NEWS */
+#news{
+    background-image: url(../../../siteimages/news-bg.jpg);
+    height: 270px;
+    margin-bottom: 40px;
+}
+
+#news .page-title{
+    text-align: center;
+}
