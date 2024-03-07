@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 사칙 연산
+        let result = 0;
+        result = 10 + 20;
+        document.write(result + '<br>');
+        
+        result = 10 - 20;
+        document.write(result + '<br>');
+        
+        result = 10 * 20;
+        document.write(result + '<br>');
+        
+        result = 10 / 20;
+        document.write(result + '<br>');
+        
+        result = 10 % 3;
+        document.write(result + '<br>');
+
+        // 증감 연산
+        let val = 10;
+        document.write(++val + "<br>");
+        document.write(val++ + "<br>");
+        document.write(val + "<br>");
+
+        // 비교 연산
+        let val1 = 20;
+        document.write((val>val1) + "<br>");
+
+        // 비교 연산
+        let isResult = 10 == 10;
+        document.write(isResult + "<br>")
+        isResult = 10 == '10';
+        document.write(isResult + "<br>")   // 자동 형변환이 발생하여 true 리턴
+        isResult = 10 === '10';
+        document.write(isResult + "<br>")   // ===은 자료형까지 일치하는지 여부에 따라 true, false 리턴
+
+        // 비교 연산(c언어의 잔재)
+        isResult = false == '0';            // 0이라는 개념을 false와 일치시켜놨기 때문에 true 리턴
+        document.write(isResult + "<br>")
+        isResult = false == 0;            
+        document.write(isResult + "<br>")
+        isResult = "" == [];                // 비어있다는 공통점이 있기 때문에 자동 형변환을 해서 true 리턴
+        document.write(isResult + "<br>")
+        isResult = 0 == [];            
+        document.write(isResult + "<br>")
+
+        // 논리 연산
+        document.write((true && true) + "<br>");
+        document.write((false && true) + "<br>");
+        document.write((true || false) + "<br>");
+        document.write((!false) + "<br>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
