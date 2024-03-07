@@ -26,7 +26,7 @@
             const fish = document.getElementById('fish');
             let x = 50;
             let y = 120;
-            const move_val = 50;
+            const move_val = 10;
             const panel_width = 600;
             const panel_height = 400;
             const fish_width = 120;
@@ -47,6 +47,13 @@
                         y += move_val;
                         break;
                 }
+                // let _left = fist.style.left;
+                // console.log('fish left = ' + _left);
+                // _left = _left.replace('px', '');
+                // console.log('fish left = ' + _left);
+                // console.log('fish left = ' + typeof(_left));
+                // _left = Number(_left);
+                // console.log('_left type= ' + typeof(_left));
                 if(x<0)
                     x=0;
                 else if(x>panel_width - fish_width)
@@ -59,8 +66,8 @@
 
                 // 물고기 위치 이동
                 console.log(`fish 위치 : x=${x}, y=${y}`)
-                fish.style.left = x+'px';
-                fish.style.top = y+'px';
+                fish.style.left = x+'px';           // fish.style.left -> string값으로 저장하므로,
+                fish.style.top = y+'px';            // 따로 변수값을 지정해 준다음 그 값을 변화하게 만들고, 변화한 값을 위치에 지정
             });
         });
     </script>
