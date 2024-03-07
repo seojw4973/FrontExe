@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let val = 10;           /* let : 중복 선언 불가 */
+        console.log(val);       // 지역변수로 취급
+        val = 100;
+        console.log(val);
+        val = 3.14;
+        console.log(val);
+        // let vat = 100;       -> 불가능
+
+        var a = 10;             /* var : 중복 선언 가능 ~> 오류의 원인 잘 안쓰이는 추세*/
+        console.log(a);         // 기본적으로는 전역변수, 함수 내에서는 지역변수
+        console.log(typeof(a)); // var은 함수 내에서 변수를 선언해도 함수 외부에서도 사용할 수 있음
+        a = '홍길동';
+        console.log(a);
+        console.log(typeof(a));
+        a = [10, 20, 30];
+        console.log(a);
+        console.log(typeof(a));
+        var a = 30;
+
+        const pi = 3.141592;     /* const : 상수 */
+        console.log(pi);         // 초기화가 필요
+        pi = 1.54;
+        console.log(pi);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
