@@ -47,6 +47,13 @@
                         y += move_val;
                         break;
                 }
+                // 웹페이지 상 요소의 크기 및 위치정보 반환
+                const rcPanel = document.getElementById('panel').getBoundingClientRect();
+                console.log(rcPanel);
+                const rcFish = fish.getBoundingClientRect();
+                console.log(rcFish);
+
+                // style의 left값 가져오기
                 // let _left = fist.style.left;
                 // console.log('fish left = ' + _left);
                 // _left = _left.replace('px', '');
