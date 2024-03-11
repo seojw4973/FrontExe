@@ -10,13 +10,14 @@
         numbers.forEach(function(value, index, array){
             console.log(`${index}번째 요소 : ${value}`);
         });
-
+        
+        // 위 아래는 같은 역할
         function forEach(array, callback){
             for(let i=0;i<array.length;i++){
                 callback(array[i], i, array);
             }
         }
-        // 위 아래는 같은 역할
+
         forEach(numbers, function(value, index, array){
             console.log(`${index}번째 요소 : ${value}`);
         });
