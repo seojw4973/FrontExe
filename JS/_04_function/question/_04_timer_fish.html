@@ -14,70 +14,85 @@ move_fish에서 button을 2개 생성
     <title>Document</title>
     <style>
         #panel{
-            width:600px;
-            height:300px;
-            border:1px solid #999;
-            position:relative;
+            width: 600px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+            
         }
         #bar{
-            position:absolute;
-            left:50px;
-            top:190px;
-            width:500px;
-            height:20px;
-            background:#f30;
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 20px;
+            background-color: #f30;
         }
         #fish{
-            position:absolute;
-            left:50px;
-            top:120px;
+            position: absolute;
+            left: 50px;
+            top: 120px;
         }
         #nav{
-            margin-top:20px;
-            text-align:center;
-            width:600px;
+            margin-top: 20px;
+            text-align: center;
+            width: 600px;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            let $fish = document.querySelector('#fish');
-            let $btnMove = document.querySelector('#btnMove');
+            let $fish = document.querySelector('#fish');    //$는 jquery를 쓰던 관습에서 비롯
+            let $btnStart = document.querySelector('#btnStart');
             let $btnStop = document.querySelector('#btnStop');
             const MOVE_VAL = 50;
             let step = MOVE_VAL;
             const MAX_X = 430;
             const MIN_X = 50;
+            let timerID = null;
+            const INTERVAL = 100;
+            
+            $btnStart.addEventListener('click', () => {
+                // timer가 작동하면 더이상 타이머를 추가로 동작하지 못하도록
+                if(timerID !==null)
+                    return;
 
-            $btnMove.addEventListener('click', () => {
-                let x = $fish.getBoundingClientRect().left + step;
+                timerID = setInterval(() =>{
+                    let x = $fish.getBoundingClientRect().left + step;
 
-                if(x >= MAX_X){
-                    x = MAX_X;
-                    $fish.setAttribute('src', '../../images2/fish2.png');
-                    step = -MOVE_VAL;
-                }else if(x < MIN_X){
-                    x = MIN_X;
-                    $fish.setAttribute('src', '../../images2/fish1.png');
-                    step = MOVE_VAL;
-                }
-
+                    if(x>= MAX_X){
+                        x = MAX_X;
+                        $fish.setAttribute('src', '../../../images2/fish2.png')
+                        step = -MOVE_VAL;
+                    }else if(x < MIN_X){
+                        x = MIN_X;
+                        $fish.setAttribute('src', '../../../images2/fish1.png');
+                        step = MOVE_VAL;
+                    }
+                    $fish.style.left = x+'px';
+                }, INTERVAL);
+            
+            });    
+            
             $btnStop.addEventListener('click', ()=>{
+                // 타이머가 동작하지 않는다면 멈출 필요 없다.
+                if(timerID === null)
+                    return;
 
+                clearInterval(timerID);
+                timerID = null;
                 
-            })
-
-                $fish.style.left = x + 'px';
             });
         });
+        
     </script>
 </head>
 <body>
     <div id="panel">
-        <img src="../../images2/fish1.png" id="fish">
+        <img src="../../../images2/fish.png" id="fish">
         <div id="bar"></div>
     </div>
     <div id="nav">
-        <button id="btnMove">시작</button>
+        <button id="btnStart">시작</button>
         <button id="btnStop">멈춤</button>
     </div>
 </body>
