@@ -26,6 +26,26 @@
         05,1143.2,1099.22,1267.65
         06,1141.5,1091.33,1261.78
         `;
+
+        input = input.trim();       // 양쪽 공백문자 제거
+        input = input.split('\n');  // \n 기준으로 잘라서 배열
+
+        console.log(input);
+
+        input = input.map((line) => line.split(','));
+        newInput = [];
+        input.forEach(function(line){
+            temp = [];
+            line.forEach(function(elem){
+                elem = elem.trim();
+                temp.push(elem);
+            });
+            newInput.push(temp);
+        });
+        console.log(newInput);
+
+        const jsonStr = JSON.stringify(newInput);
+        console.log(jsonStr);
     </script>
 </head>
 <body>
