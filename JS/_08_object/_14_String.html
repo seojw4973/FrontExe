@@ -32,19 +32,19 @@
 
         console.log(input);
 
-        input = input.map((line) => line.split(','));
+        input = input.map((line) => line.trim().split(','));    // 배열로 변환되기 전 문자열인 상태에서 trim()함수를 사용해야 공백이 사라진 뒤 배열로 저장됨
         newInput = [];
-        input.forEach(function(line){
-            temp = [];
-            line.forEach(function(elem){
-                elem = elem.trim();
-                temp.push(elem);
-            });
-            newInput.push(temp);
-        });
-        console.log(newInput);
+        // input.forEach(function(line){
+        //     temp = [];
+        //     line.forEach(function(elem){
+        //         elem = elem.trim();
+        //         temp.push(elem);
+        //     });
+        //     newInput.push(temp);
+        // });
+        console.log(input);
 
-        const jsonStr = JSON.stringify(newInput);
+        const jsonStr = JSON.stringify(input);
         console.log(jsonStr);
     </script>
 </head>
