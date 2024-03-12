@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const i = 123.456789;
+
+        console.log(i.toFixed(2));
+        console.log(i.toFixed(3));
+        console.log(i.toFixed(4));
+        console.log('');
+
+        const m = Number('korea');          // 'korea' -> 숫자로 변환 시도
+        console.log(m);                     // NaN : Not a Number
+        console.log(m===NaN);               // 비교 안됨
+        console.log(Number.isNaN(m));       // 결과값 true, 숫자면 false, 아니면 true
+        console.log('');
+
+        const n = 10/0;                     // Infinity, 무한대
+        console.log(n);
+        const o = -10/0;
+        console.log(o);                     // -Infinity
+        console.log(Number.isFinite(n));    // ifFinite : 유한한 값이면 true, 무한대의 값이면 false
+        console.log(Number.isFinite(o));    // 결과값 false
+        console.log(Number.isFinite(1));    // 결과값 true
+        console.log(Number.isFinite(100));  // 결과값 true
+        console.log(n === Infinity);        // 결과값 true
+        console.log(o === -Infinity);       // 결과값 true
+        console.log('');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
