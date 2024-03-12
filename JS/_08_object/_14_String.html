@@ -31,9 +31,18 @@
         input = input.split('\n');  // \n 기준으로 잘라서 배열
 
         console.log(input);
+        // 방법 1 : 배열로 변환되기 전 문자열인 상태에서 trim()함수를 사용해야 공백이 사라진 뒤 배열로 저장됨
+        input = input.map((line) => line.trim().split(',')); 
+        
+        // 방법 2 : map을 사용해서 각 배열 요소의 공백 문자 제거
+        // input = input.map(function(line){
+        //     return line = line.map(function(elem){
+        //         return elem.trim();
+        //     })
+        // })
 
-        input = input.map((line) => line.trim().split(','));    // 배열로 변환되기 전 문자열인 상태에서 trim()함수를 사용해야 공백이 사라진 뒤 배열로 저장됨
-        newInput = [];
+        // 방법 3 : forEach를 사용해서 각 배열 요소의 공백 문자 제거
+        // newInput = [];
         // input.forEach(function(line){
         //     temp = [];
         //     line.forEach(function(elem){
