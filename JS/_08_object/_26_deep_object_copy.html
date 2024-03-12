@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체의 깊은 복사 전개 연산자를 통해 배열을 개별로 가져온 뒤, 배열을 변경하거나 추가하는 방식
+        const pet = {
+            name: '뽀삐',
+            age: 6,
+            color: '하얀색'
+        };
+
+        const star = {
+            ...pet,
+            name:'별',
+            age:3,
+            weight:'3.4kg'
+        };
+
+        console.log(pet);
+        console.log(star);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

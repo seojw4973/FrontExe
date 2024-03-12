@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            width: 400px;
+            height: 200px;
+            top: 10px;
+            left: 100px;
+            position: absolute;
+            /*다른 요소의 자식일 경우 relative를 기준으로 위치를 찾지만, 최상위일 경우 relative없이 absolute를 사용할 수 있음*/
+            border: 3px solid red;
+            box-shadow: 10px 10px #ccc;
+        }
+    </style>
+    <script>
+        /*
+        타이머를 동작시켜서 logo_01.jpg~logo_08.jpg로 교체하도록 만듭니다.
+        단, 방향키 상을 누르면 교체 속도가 빨라지고
+        방향키 하를 누르면 교체 속도가 느려지게 됩니다.
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let $banner = document.querySelector('#banner');
+            let INTERVAL = 1000;
+            let i = 1;
+
+            timerID = setInterval(() => {
+                if (i === 8)
+                    i = 1;
+                i++;
+                console.log('i = ' + i);
+                $banner.setAttribute('src', `../../../images2/logo_0${i}.jpg`);
+            }, INTERVAL);
+
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드 : ' + e.keyCode);
+                switch (e.keyCode) {
+                    case 38:
+                        // console.log('방향키 상 입력');
+                        clearInterval(timerID);
+                        INTERVAL = INTERVAL - 100;
+                        timerID = setInterval(() => {
+                            if (i === 8)
+                                i = 1;
+                            i++;
+                            console.log('i = ' + i);
+                            $banner.setAttribute('src', `../../../images2/logo_0${i}.jpg`);
+                        }, INTERVAL)
+                        break;
+                    case 40:
+                        console.log('방향키 하 입력');
+                        clearInterval(timerID);
+                        INTERVAL = INTERVAL + 100;
+                        timerID = setInterval(() => {
+                            if (i === 8)
+                                i = 1;
+                            i++;
+                            console.log('i = ' + i);
+                            $banner.setAttribute('src', `../../../images2/logo_0${i}.jpg`);
+                        }, INTERVAL)
+                        break;
+                    
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../../../images2/logo_01.jpg" class="banner" id="banner" />
+</body>
+
+</html>
