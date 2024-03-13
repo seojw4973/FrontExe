@@ -15,17 +15,17 @@
         console.log('');
 
         const b = Number(273);          // 자료형 변환, 기본 타입 number
-        console.log(b);
-        console.log(typeof b);
+        console.log(b);                 // 273
+        console.log(typeof b);          // number
         console.log('');
 
         const c = '안녕하세요';          // 기본 타입 string, 객체 X
         c.sample = 10;
         console.log(c);
         console.log(c.sample);          // undefined
-        console.log(typeof c);
-        console.log(c.answer = '감사합니다.');  // 일시적으로 객체 타입 Number로 변환
-        console.log(c.answer);                 // 원래 number
+        console.log(typeof c);          // string
+        console.log(c.answer = '감사합니다.');  // 일시적으로 객체 타입 String으로 변환
+        console.log(c.answer);          // 원래 string
         console.log(c.length)           // 일시적으로 string -> String 객체 타입으로 변환
         console.log('');
     </script>
