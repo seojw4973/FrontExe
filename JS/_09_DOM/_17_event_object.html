@@ -34,14 +34,14 @@
         let h1 = null;
         
         const listener = (event) => {
-                const textarea = event.currentTarget;       // 이벤트 발생시킨 객체
-                const length = textarea.value.length;
-                h1.textContent = `글자 수 : ${length}`;
+            const textarea = event.currentTarget;       // 이벤트 발생시킨 객체
+            const length = textarea.value.length;
+            h1.textContent = `글자 수 : ${length}`;
         }
 
         document.addEventListener('DOMContentLoaded', ()=>{
             const textarea = document.querySelector('textarea');
-            const h1 = document.querySelector('h1');
+            h1 = document.querySelector('h1');
 
             textarea.addEventListener('keyup', listener);
         });
@@ -59,7 +59,7 @@
 
         document.addEventListener('DOMContentLoaded', ()=>{
             const textarea = document.querySelector('textarea');
-            const h1 = document.querySelector('h1');
+            h1 = document.querySelector('h1');
 
             textarea.addEventListener('keyup', listener);
         });
