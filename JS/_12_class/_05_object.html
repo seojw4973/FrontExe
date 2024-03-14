@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const creatStudent = function(name, kor, eng, math, sci){
+            return{
+                // Field(property) - 속성, 멤버 변수
+                name: name,
+                kor: kor,
+                eng: eng,
+                math: math,
+                sci: sci,
+
+                // Method   -   메서드, 멤버함수
+                getSum(){
+                    return this.kor + this.eng + this.math + this.sci;
+                },
+                
+                getAvg(){
+                    return this.getSum()/4;
+                },
+                toString(){
+                    return `${this.name}\t${this.getSum()}점\t${this.getAvg()}점\n`;
+                }
+            }
+        }
+        const students = [];
+        students.push(creatStudent('홍길동', 74, 88, 90, 90));
+        students.push(creatStudent('임꺽정', 55, 35, 81, 90));
+        students.push(creatStudent('장길산', 74, 88, 75, 67));
+        students.push(creatStudent('일지매', 94, 88, 90, 98));
+
+        let output = '이름\t총점\t평균\n';
+        for(const s of students){
+            output += s;        // s.toString(); 호출
+        }
+        console.log(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
