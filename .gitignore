@@ -2,3 +2,8 @@
 *.avi
 *.pdf
 *.mp3
+/.metadata/
+/.recommenders/
+.gitignore
+.settings/
+*.class/
